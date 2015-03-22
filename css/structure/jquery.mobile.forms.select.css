@@ -139,3 +139,7 @@
 .ui-selectmenu .ui-selectmenu-placeholder {
 	display: none;
 }
+/*Fixes #8038: Multi inline select menu hides if width exceeds device width*/
+.ui-select.ui-btn-inline {
+	max-width: 100% ;
+}
