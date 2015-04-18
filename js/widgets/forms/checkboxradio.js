@@ -258,12 +258,14 @@ $.widget( "mobile.checkboxradio", $.extend( {
 
 		this._getInputSet().each( function() {
 			var $this = $( this );
-
+			console.log($this.attr("id"));
 			if ( ( this.checked || self.inputtype === "checkbox" ) && !changeTriggered ) {
 				$this.trigger( "change" );
 			}
-		})
-		.checkboxradio( "refresh" );
+		});
+
+		this.refresh();
+		
 	},
 
 	_reset: function() {
