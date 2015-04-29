@@ -251,6 +251,11 @@ $.widget( "mobile.flipswitch", $.extend({
 		if ( options.corners !== undefined ) {
 			this.widget().toggleClass( "ui-corner-all", options.corners );
 		}
+		if( options.wrapperClass !== undefined ) {
+			this.widget()
+				.removeClass( this.options.wrapperClass )
+				.addClass( options.wrapperClass ) ;
+		}
 
 		this._super( options );
 	},
